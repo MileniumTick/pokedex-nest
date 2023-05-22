@@ -4,8 +4,10 @@ import { join } from 'path';
 import { PokemonModule } from './pokemon/pokemon.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { CommonModule } from './common/common.module';
+import * as dotenv from 'dotenv';
 
-// const __dirname = path.resolve();
+dotenv.config();
+
 @Module({
   imports: [
     ServeStaticModule.forRoot({
